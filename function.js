@@ -16,11 +16,11 @@ const calculation=function(user) {
     
       const unique_user_data = [];
       for (let i = 0; i < unique_user_name.length; i++) {
-        const user_data = [];
+        const user_alltime_data = [];
     
         for (let j = 0; j < user.length; j++) {
           if (unique_user_name[i] === user[j].name) {
-            user_data.push({
+            user_alltime_data.push({
               name: user[j].name,
               assessmentMonth: user[j].assessmentMonth,
               performance: user[j].performance,
@@ -31,7 +31,7 @@ const calculation=function(user) {
     
         unique_user_data.push({
           name: unique_user_name[i],
-          all_month_data: user_data,
+          all_month_data: user_alltime_data,
         });
       }
       console.log(unique_user_data[1].all_month_data[0].scorePerCategory);
